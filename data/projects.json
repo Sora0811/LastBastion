@@ -1,0 +1,16 @@
+{
+  "version": "0.2",
+  "updated": "2026-11-15",
+  "projects": [
+    {
+      "id": "slot-1",
+      "name": "專案名稱",
+      "summary": "一句話說明這個專案，例如作品類型或它解決的問題。",
+      "url": "",
+      "year": "2026",
+      "tags": ["WEB"],
+      "status": "draft",
+      "rooms": ["armory"]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 <section class="room-section">
-  <h2>架子上的東西</h2>
-  <p>裝備間放三種東西：<strong>構想</strong>（還不能用的）、<strong>研究筆記</strong>（讀完留下來的）、<strong>開發成果</strong>（已經在跑的）。每一項都標狀態，避免把草稿當成完成品。</p>
+  <h2>存放內容</h2>
+  <p>裝備間分為三類：<strong>構想</strong>、<strong>研究筆記</strong>、<strong>開發成果</strong>，另設外部專案入口。</p>
 </section>
 
 <section class="room-section">
@@ -9,13 +9,13 @@
     <article class="card">
       <span class="card__eyebrow">IDEA-01</span>
       <h3 class="card__title">離線可讀的堡壘</h3>
-      <p class="card__text">把房間內容包成可離線瀏覽的形式，停電也能看。目前只想到 Service Worker，還沒動工。</p>
+      <p class="card__text">把房間內容包成可離線瀏覽的形式。目前評估 Service Worker，尚未動工。</p>
       <div class="card__foot"><span class="badge badge--draft">草稿</span></div>
     </article>
     <article class="card">
       <span class="card__eyebrow">IDEA-02</span>
       <h3 class="card__title">依樓層換色的照明</h3>
-      <p class="card__text">每個樓層一組色溫，讓通道圖的位置感更明顯。要小心不要變成彩虹。</p>
+      <p class="card__text">每個樓層一組色溫，強化通道圖的位置感。</p>
       <div class="card__foot"><span class="badge badge--draft">草稿</span></div>
     </article>
   </div>
@@ -28,14 +28,14 @@
       <time datetime="2026-11-15">2026-11-15</time>
       <div>
         <strong>GitHub Pages 專案站的路徑</strong>
-        <span>改用相對路徑與 document.baseURI 組網址，部署到 /LastBastion/ 子目錄時不必改任何字串。</span>
+        <span>以相對路徑與 document.baseURI 組網址，部署到 /LastBastion/ 子目錄時無須修改字串。</span>
       </div>
     </li>
     <li>
       <time datetime="2026-11-15">2026-11-15</time>
       <div>
         <strong>Hash 路由與重新整理</strong>
-        <span>以 #/房間-id 記住位置，不需要伺服器改寫規則，重新整理仍停在原房間。</span>
+        <span>以 #/房間-id 記錄位置，不需伺服器改寫規則。</span>
       </div>
     </li>
   </ul>
@@ -51,8 +51,14 @@
       <tbody>
         <tr><td>Last Bastion 網站骨架</td><td>v0.1</td><td><span class="badge badge--live">已上線</span></td></tr>
         <tr><td>通道圖與房間路由</td><td>v0.1</td><td><span class="badge badge--live">已上線</span></td></tr>
-        <tr><td>內容文稿管線（HTML 片段）</td><td>v0.1</td><td><span class="badge badge--live">已上線</span></td></tr>
+        <tr><td>外部專案入口</td><td>v0.2</td><td><span class="badge badge--draft">建置中</span></td></tr>
       </tbody>
     </table>
   </div>
+</section>
+
+<section class="room-section">
+  <h2>外部專案 <span class="h2__note">EXTERNAL</span></h2>
+  <p>其他網站與作品的入口，依發布狀態排列。</p>
+  <div data-projects="armory"></div>
 </section>

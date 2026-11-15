@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "updated": "2026-11-15",
   "home": "lounge",
   "floors": [
@@ -13,14 +13,14 @@
           "label": "交誼廳",
           "code": "B1-01",
           "path": "content/B1-lounge/index.html",
-          "summary": "堡壘的入口大廳，放著歡迎訊息、近期公告與通往各層的指引。",
+          "summary": "網站首頁。入口大廳，通往各樓層的起點。",
           "children": [
             {
               "id": "annex",
               "label": "副廳",
               "code": "B1-02",
               "path": "content/B1-lounge/annex/index.html",
-              "summary": "交誼廳旁的空房間，清空後保留給臨時展覽與合作企劃。"
+              "summary": "交誼廳旁的預留空間，供臨時展覽與合作企劃使用。"
             }
           ]
         }
@@ -36,7 +36,7 @@
           "label": "宿舍",
           "code": "B2-01",
           "path": "content/B2-dormitory/index.html",
-          "summary": "原創角色、插畫與故事都住在這一層，分成三個房間慢慢整理。",
+          "summary": "原創角色、插畫與故事，分置於三間房。",
           "children": [
             {
               "id": "room-1",
@@ -57,7 +57,7 @@
               "label": "房間 3",
               "code": "B2-04",
               "path": "content/B2-dormitory/room-3/index.html",
-              "summary": "短篇與世界觀碎片，按時間順序堆放。"
+              "summary": "短篇、片段與世界觀筆記。"
             }
           ]
         }
@@ -73,21 +73,21 @@
           "label": "工務區",
           "code": "B3-01",
           "path": "content/B3-workshop/index.html",
-          "summary": "還沒修好的構想、正在讀的資料，以及已經上線的成果。",
+          "summary": "工務層門廳，通往裝備間與訓練室。",
           "children": [
             {
               "id": "armory",
               "label": "裝備間",
               "code": "B3-02",
               "path": "content/B3-armory/index.html",
-              "summary": "構想、研究筆記與開發成果集中在此。"
+              "summary": "構想、研究筆記、開發成果與外部專案。"
             },
             {
               "id": "training",
               "label": "訓練室",
               "code": "B3-03",
               "path": "content/B3-training/index.html",
-              "summary": "可以實際操作的示範，測試網站互動與小型實驗。"
+              "summary": "可操作的互動示範與測試紀錄。"
             }
           ]
         }
@@ -103,7 +103,7 @@
           "label": "指揮部",
           "code": "B4-01",
           "path": "content/B4-command/index.html",
-          "summary": "創作者的工作桌、目前在做的事，以及對外窗口。"
+          "summary": "創作者簡介與近期近況。"
         }
       ]
     },
@@ -113,11 +113,11 @@
       "name": "醫療層",
       "rooms": [
         {
-          "id": "infirmary",
-          "label": "醫療站",
+          "id": "contact",
+          "label": "與我聯絡",
           "code": "B5-01",
-          "path": "content/B5-infirmary/index.html",
-          "summary": "保留給休息與尚未決定的展示，暫時只點著一盞燈。"
+          "path": "content/B5-contact/index.html",
+          "summary": "電子郵件、社群與其他聯絡方式。"
         }
       ]
     }
