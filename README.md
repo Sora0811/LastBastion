@@ -3,7 +3,7 @@
 以地下堡壘的空間結構作為導覽的個人創作展示網站。
 每一道**樓梯**代表一層，每一條**走廊**代表同層的房間；左側通道圖的燈號標示目前所在位置。
 
-- 版本：v0.2
+- 版本：v0.3
 - 技術：純 HTML / CSS / SVG / 原生 JavaScript，無建置流程、無外部依賴
 - 部署目標：GitHub Pages（專案站 `https://<帳號>.github.io/LastBastion/`）
 
@@ -37,7 +37,8 @@ LastBastion/
 │   ├── B3-armory/index.html            裝備間
 │   ├── B3-training/index.html          訓練室
 │   ├── B4-command/index.html           指揮部
-│   └── B5-contact/index.html           與我聯絡
+│   ├── B4-command/contact/index.html   與我聯絡（指揮部附屬）
+│   └── B5-infirmary/index.html         醫療站（整備中）
 ├── README.md
 └── CHANGELOG.md
 ```
@@ -119,7 +120,7 @@ python -m http.server 8080
 
 ## 聯絡頁
 
-`content/B5-contact/index.html` 以清單呈現各聯絡管道，兩種列：
+`content/B4-command/contact/index.html` 位於指揮部之下（B4-02），以清單呈現各聯絡管道，兩種列：
 
 - **可點擊**：`<a class="contact" href="…" target="_blank" rel="noopener noreferrer">`，右側顯示 `↗`。
 - **尚未開放**：`<div class="contact is-pending">`，右側掛 `未開放` 標籤，不會產生空連結。
@@ -142,7 +143,7 @@ python -m http.server 8080
 cd D:\LastBastion
 git init
 git add .
-git commit -m "Last Bastion v0.2"
+git commit -m "Last Bastion v0.3"
 git branch -M main
 git remote add origin https://github.com/sora0811/LastBastion.git
 git push -u origin main
@@ -155,7 +156,7 @@ git push -u origin main
 - 已附 `.nojekyll`，避免 Jekyll 處理 `assets/` 內的特殊檔名。
 - `index.html` 位於根目錄，hash 路由（`#/房間-id`）不需要任何伺服器改寫規則。
 
-## 驗收清單（v0.2）
+## 驗收清單（v0.3）
 
 - [x] 以靜態 HTTP 伺服器可正常預覽
 - [x] 橫幅招牌、藤蔓盆栽與暖色工業風配色
@@ -164,9 +165,11 @@ git push -u origin main
 - [x] 重新整理後回到原房間（hash 路由）
 - [x] 相對路徑，相容 GitHub Pages 專案站
 - [x] 桌面與行動版面（側欄抽屜、漢堡按鈕）
-- [x] 醫療站改為「與我聯絡」，聯絡管道可留空並標示狀態
+- [x] 與我聯絡移至指揮部之下，麵包屑與樓層標示同步
+- [x] B5 醫療站獨立成層，內容待定案
+- [x] 聯絡管道可留空並標示狀態
 - [x] 外部專案入口只需改 `projects.json`，未填網址不會產生空連結
-- [x] 房間文案改為簡短說明，不再引導操作
+- [x] 房間文案為簡短說明，不引導操作
 - [x] README 說明預覽、新增內容、外部專案與部署
 
 ## 授權

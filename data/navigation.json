@@ -103,7 +103,16 @@
           "label": "指揮部",
           "code": "B4-01",
           "path": "content/B4-command/index.html",
-          "summary": "創作者簡介與近期近況。"
+          "summary": "創作者簡介與近期近況。",
+          "children": [
+            {
+              "id": "contact",
+              "label": "與我聯絡",
+              "code": "B4-02",
+              "path": "content/B4-command/contact/index.html",
+              "summary": "個人聯絡方式與合作洽詢。"
+            }
+          ]
         }
       ]
     },
@@ -113,11 +122,11 @@
       "name": "醫療層",
       "rooms": [
         {
-          "id": "contact",
-          "label": "與我聯絡",
+          "id": "infirmary",
+          "label": "醫療站",
           "code": "B5-01",
-          "path": "content/B5-contact/index.html",
-          "summary": "電子郵件、社群與其他聯絡方式。"
+          "path": "content/B5-infirmary/index.html",
+          "summary": "整備中的房間，用途尚未定案。"
         }
       ]
     }
