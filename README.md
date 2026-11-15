@@ -5,7 +5,9 @@
 
 - 版本：v0.3
 - 技術：純 HTML / CSS / SVG / 原生 JavaScript，無建置流程、無外部依賴
-- 部署目標：GitHub Pages（專案站 `https://<帳號>.github.io/LastBastion/`）
+- 網站網址：<https://sora0811.github.io/LastBastion/>
+- 部署：GitHub Pages（repository `Sora0811/LastBastion`，main 分支根目錄）
+- 本機預覽：`python -m http.server 8123`（或其他靜態伺服器），開 <http://127.0.0.1:8123/>
 
 ## 目錄結構
 
