@@ -1,0 +1,125 @@
+{
+  "version": "0.1",
+  "updated": "2026-11-15",
+  "home": "lounge",
+  "floors": [
+    {
+      "id": "b1",
+      "code": "B1",
+      "name": "地面層",
+      "rooms": [
+        {
+          "id": "lounge",
+          "label": "交誼廳",
+          "code": "B1-01",
+          "path": "content/B1-lounge/index.html",
+          "summary": "堡壘的入口大廳，放著歡迎訊息、近期公告與通往各層的指引。",
+          "children": [
+            {
+              "id": "annex",
+              "label": "副廳",
+              "code": "B1-02",
+              "path": "content/B1-lounge/annex/index.html",
+              "summary": "交誼廳旁的空房間，清空後保留給臨時展覽與合作企劃。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "code": "B2",
+      "name": "居住層",
+      "rooms": [
+        {
+          "id": "dormitory",
+          "label": "宿舍",
+          "code": "B2-01",
+          "path": "content/B2-dormitory/index.html",
+          "summary": "原創角色、插畫與故事都住在這一層，分成三個房間慢慢整理。",
+          "children": [
+            {
+              "id": "room-1",
+              "label": "房間 1",
+              "code": "B2-02",
+              "path": "content/B2-dormitory/room-1/index.html",
+              "summary": "角色名冊、設定資料與人物關係。"
+            },
+            {
+              "id": "room-2",
+              "label": "房間 2",
+              "code": "B2-03",
+              "path": "content/B2-dormitory/room-2/index.html",
+              "summary": "插畫與場景草圖，依系列排列。"
+            },
+            {
+              "id": "room-3",
+              "label": "房間 3",
+              "code": "B2-04",
+              "path": "content/B2-dormitory/room-3/index.html",
+              "summary": "短篇與世界觀碎片，按時間順序堆放。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "code": "B3",
+      "name": "工務層",
+      "rooms": [
+        {
+          "id": "workshop",
+          "label": "工務區",
+          "code": "B3-01",
+          "path": "content/B3-workshop/index.html",
+          "summary": "還沒修好的構想、正在讀的資料，以及已經上線的成果。",
+          "children": [
+            {
+              "id": "armory",
+              "label": "裝備間",
+              "code": "B3-02",
+              "path": "content/B3-armory/index.html",
+              "summary": "構想、研究筆記與開發成果集中在此。"
+            },
+            {
+              "id": "training",
+              "label": "訓練室",
+              "code": "B3-03",
+              "path": "content/B3-training/index.html",
+              "summary": "可以實際操作的示範，測試網站互動與小型實驗。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "code": "B4",
+      "name": "指揮層",
+      "rooms": [
+        {
+          "id": "command",
+          "label": "指揮部",
+          "code": "B4-01",
+          "path": "content/B4-command/index.html",
+          "summary": "創作者的工作桌、目前在做的事，以及對外窗口。"
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "code": "B5",
+      "name": "醫療層",
+      "rooms": [
+        {
+          "id": "infirmary",
+          "label": "醫療站",
+          "code": "B5-01",
+          "path": "content/B5-infirmary/index.html",
+          "summary": "保留給休息與尚未決定的展示，暫時只點著一盞燈。"
+        }
+      ]
+    }
+  ]
+}
