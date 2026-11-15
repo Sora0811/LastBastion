@@ -69,7 +69,7 @@ export function renderNav(container, model) {
   for (const entry of model.groups) {
     container.append(buildGroup(entry));
   }
-  syncNav(container, model.data.home, model);
+  syncNav(container, null, model);
 }
 
 function buildGroup(entry) {

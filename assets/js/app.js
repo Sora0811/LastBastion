@@ -93,8 +93,8 @@ function setNavOpen(open) {
   els.toggle.setAttribute('aria-expanded', String(open));
 
   if (open) {
-    const first = els.nav.querySelector('a.link');
-    if (first) first.focus({ preventScroll: true });
+    const target = els.nav.querySelector('a[aria-current="page"]') || els.nav.querySelector('a.link');
+    if (target) target.focus({ preventScroll: true });
   }
 }
 
