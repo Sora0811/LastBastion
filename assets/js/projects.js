@@ -7,7 +7,7 @@
 
 const URL_PROJECTS = new URL('data/projects.json', document.baseURI);
 
-const STATUS = {
+export const STATUS = {
   live: { label: '已發布', tone: 'live', rank: 0 },
   wip: { label: '開發中', tone: 'draft', rank: 1 },
   draft: { label: '規劃中', tone: 'hold', rank: 2 },
@@ -16,7 +16,8 @@ const STATUS = {
 
 let cache = null;
 
-function loadProjects() {
+/** 讀取全部專案資料；醫療站的支援區也共用同一份。 */
+export function loadProjects() {
   if (!cache) {
     cache = fetch(URL_PROJECTS, { cache: 'no-cache' })
       .then((response) => {

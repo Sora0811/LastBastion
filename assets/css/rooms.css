@@ -785,6 +785,255 @@ a.contact:focus-visible {
   }
 }
 
+/* ---------- 醫療站：專案支援 ---------- */
+
+.support-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.support-list > .project-empty {
+  grid-column: 1 / -1;
+}
+
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 15px 17px;
+  border: 1px solid var(--line-wood);
+  border-radius: var(--radius);
+  background: #F2EBDE;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .6) inset;
+}
+
+.support__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.support__name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  color: #332F29;
+}
+
+.support__text {
+  flex: 1;
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+.support__link {
+  align-self: flex-start;
+  padding: 6px 13px;
+  font-size: 12px;
+}
+
+.support__link span {
+  font-size: 12px;
+  color: var(--wood-dark);
+}
+
+/* ---------- 醫療站：常見問題 ---------- */
+
+.faq-list {
+  display: grid;
+  gap: 18px;
+}
+
+.faq-group__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: var(--wood-dark);
+}
+
+.faq-group__count {
+  min-width: 18px;
+  padding: 0 6px;
+  border: 1px solid var(--line-wood);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: center;
+  color: var(--wood);
+}
+
+.faq {
+  border: 1px solid var(--line-wood);
+  border-radius: var(--radius);
+  background: #F2EBDE;
+}
+
+.faq + .faq {
+  margin-top: 8px;
+}
+
+.faq[open] {
+  border-color: rgba(212, 164, 105, .7);
+}
+
+.faq__summary,
+.case__summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 15px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq__summary::-webkit-details-marker,
+.case__summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__summary::after {
+  content: "＋";
+  margin-left: 4px;
+  flex: none;
+  font-size: 12px;
+  color: var(--wood);
+}
+
+.faq[open] .faq__summary::after {
+  content: "－";
+}
+
+.faq__q {
+  min-width: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #332F29;
+}
+
+.faq__tag {
+  margin-left: auto;
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  color: var(--wood);
+}
+
+.faq__a {
+  padding: 12px 16px 14px;
+  border-top: 1px dashed var(--line);
+}
+
+.faq__a p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+
+.faq__a p + p {
+  margin-top: 8px;
+}
+
+/* ---------- 醫療站：診療紀錄 ---------- */
+
+.case-list {
+  display: grid;
+  gap: 10px;
+}
+
+.case {
+  position: relative;
+  border: 1px solid var(--line-wood);
+  border-left: 3px solid rgba(137, 102, 75, .55);
+  border-radius: var(--radius);
+  background: #F2EBDE;
+}
+
+.case[open] {
+  border-left-color: var(--amber);
+}
+
+.case__summary {
+  display: grid;
+  gap: 2px;
+  padding: 12px 16px;
+}
+
+.case__summary::after {
+  content: "＋";
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  font-size: 12px;
+  color: var(--wood);
+}
+
+.case[open] .case__summary::after {
+  content: "－";
+}
+
+.case__title {
+  padding-right: 26px;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.65;
+  color: #332F29;
+}
+
+.case__meta {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .06em;
+  color: var(--wood);
+}
+
+.case__body {
+  padding: 2px 16px 16px;
+  border-top: 1px dashed var(--line);
+}
+
+.case__body:empty {
+  display: none;
+}
+
+.case__doc h3 {
+  margin: 14px 0 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  color: var(--wood-dark);
+}
+
+.case__doc p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+
+.case__doc p + p {
+  margin-top: 8px;
+}
+
+.case__doc .text-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
 /* ---------- 各房間的個別調整 ---------- */
 
 /* 交誼廳：公告與指引之間留一點呼吸 */

@@ -6,6 +6,7 @@
 
 import { loadNavigation, indexRooms, renderNav, syncNav } from './navigation.js';
 import { mountProjects } from './projects.js';
+import { mountMedical } from './medical.js';
 
 const els = {};
 const fragmentCache = new Map();
@@ -123,6 +124,7 @@ async function route({ initial = false } = {}) {
     els.body.innerHTML = html;
     bindDemos(els.body);
     mountProjects(els.body).catch((error) => console.error(error));
+    mountMedical(els.body).catch((error) => console.error(error));
   } catch (error) {
     if (token !== renderToken) return;
     console.error(error);

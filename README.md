@@ -20,6 +20,7 @@ LastBastion/
 │   ├── js/
 │   │   ├── navigation.js      讀取導覽資料、產生樓梯／走廊選單
 │   │   ├── projects.js        讀取外部專案資料、填入房間內的入口
+│   │   ├── medical.js         醫療站：專案支援、常見問題、診療紀錄
 │   │   └── app.js             hash 路由、內容載入、示範互動
 │   └── images/
 │       ├── emblem.svg         網站標誌（favicon）
@@ -27,7 +28,8 @@ LastBastion/
 │       └── vines-right.svg    橫幅右側藤蔓
 ├── data/
 │   ├── navigation.json        樓層與房間結構（唯一導覽來源）
-│   └── projects.json          外部專案清單（各房間共用）
+│   ├── projects.json          外部專案清單（各房間共用）
+│   └── faq.json               醫療站常見問題，依專案分組
 ├── content/                   各房間的 HTML 內文稿件
 │   ├── B1-lounge/index.html            交誼廳（首頁）
 │   ├── B1-lounge/annex/index.html      副廳
@@ -38,7 +40,9 @@ LastBastion/
 │   ├── B3-training/index.html          訓練室
 │   ├── B4-command/index.html           指揮部
 │   ├── B4-command/contact/index.html   與我聯絡（指揮部附屬）
-│   └── B5-infirmary/index.html         醫療站（整備中）
+│   └── B5-infirmary/
+│       ├── index.html                  醫療站
+│       └── cases/index.json            診療案例清單（案例內文各自成檔）
 ├── README.md
 └── CHANGELOG.md
 ```
@@ -105,6 +109,7 @@ python -m http.server 8080
    | `tags` | 最多顯示三個標籤 |
    | `status` | `live` 已發布、`wip` 開發中、`draft` 規劃中、`hold` 暫停 |
    | `rooms` | 要顯示的房間 id；省略或空陣列則顯示在所有容器 |
+   | `issuesUrl` | 選填，GitHub Issues 網址；填了才會出現在醫療站的專案支援區 |
 
 2. 在房間文稿放置容器：
 
@@ -126,6 +131,81 @@ python -m http.server 8080
 - **尚未開放**：`<div class="contact is-pending">`，右側掛 `未開放` 標籤，不會產生空連結。
 
 要開放電子郵件或社群時，把該列的 `<div class="contact is-pending">` 換成 `<a class="contact" href="…">`，並更新 `contact__handle` 與右側內容即可。`data-room="contact"` 的專屬樣式在 `rooms.css` 末端。
+
+## 醫療站（B5）
+
+`content/B5-infirmary/index.html` 是各專案的支援中心，三個區塊都由資料產生：
+
+| 區塊 | 資料來源 | 說明 |
+| --- | --- | --- |
+| 專案支援 | `data/projects.json` | 列出 `issuesUrl` 有效的專案，按鈕連到 GitHub Issues |
+| 常見問題 | `data/faq.json` | 依 `project` 分組，展開顯示解答 |
+| 診療紀錄 | `content/B5-infirmary/cases/index.json` | 案例清單；內文是獨立片段，展開時才載入 |
+
+資料為空時各區塊顯示一行提示，不影響其他內容。
+
+### 專案支援
+
+在 `projects.json` 對應專案加上：
+
+```json
+"issuesUrl": "https://github.com/<帳號>/<repo>/issues"
+```
+
+留空或不是 `http(s)` 網址時不會出現在支援區，也不會產生空連結。共用同一份專案名稱、說明與狀態。
+
+### 常見問題
+
+`data/faq.json` 的 `faq` 陣列，一則一筆：
+
+```json
+{
+  "id": "faq-1",
+  "project": "rp-engine",
+  "question": "問題標題",
+  "answer": "第一段\n\n第二段（空行分段）",
+  "tag": "環境問題"
+}
+```
+
+- `project` 對應 `projects.json` 的 `id`；查不到時直接顯示該 id。
+- `tag` 選填，例如「使用疑問」「環境問題」「已知限制」。
+- 分組順序跟著 `projects.json` 的排列。
+
+### 診療紀錄
+
+清單放 `content/B5-infirmary/cases/index.json`：
+
+```json
+{
+  "cases": [
+    {
+      "id": "001-subpath",
+      "title": "部署到子目錄後樣式與內容全失",
+      "project": "rp-engine",
+      "date": "2026-11",
+      "file": "001-subpath/index.html"
+    }
+  ]
+}
+```
+
+案例內文放 `content/B5-infirmary/cases/001-subpath/index.html`，只寫片段：
+
+```html
+<div class="case__doc">
+  <h3>問題描述</h3>
+  <p>…</p>
+  <h3>發生原因</h3>
+  <p>…</p>
+  <h3>解決方式</h3>
+  <p>…</p>
+  <p><a class="text-link" href="https://github.com/…" target="_blank" rel="noopener noreferrer">相關 Issue ↗</a></p>
+</div>
+```
+
+- `file` 相對於 `cases/`；案例在展開時才載入，清單本身只讀 `index.json`。
+- 新增案例＝新增一個資料夾與文稿，再補一筆清單，不需要動程式。
 
 ## 內容規範
 
@@ -166,7 +246,10 @@ git push -u origin main
 - [x] 相對路徑，相容 GitHub Pages 專案站
 - [x] 桌面與行動版面（側欄抽屜、漢堡按鈕）
 - [x] 與我聯絡移至指揮部之下，麵包屑與樓層標示同步
-- [x] B5 醫療站獨立成層，內容待定案
+- [x] B5 醫療站具備獨立頁面與正常路由
+- [x] 醫療站三區塊由資料產生，空白時顯示提示
+- [x] 新增 `issuesUrl` 後自動出現在專案支援區
+- [x] 常見問題與診療案例可持續新增（資料檔／獨立文稿）
 - [x] 聯絡管道可留空並標示狀態
 - [x] 外部專案入口只需改 `projects.json`，未填網址不會產生空連結
 - [x] 房間文案為簡短說明，不引導操作

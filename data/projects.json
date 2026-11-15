@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "updated": "2026-11-15",
   "projects": [
     {
@@ -10,7 +10,8 @@
       "year": "2026",
       "tags": ["WEB"],
       "status": "draft",
-      "rooms": ["armory"]
+      "rooms": ["armory"],
+      "issuesUrl": ""
     }
   ]
 }
