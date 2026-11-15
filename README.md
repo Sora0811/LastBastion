@@ -221,18 +221,18 @@ python -m http.server 8080
 
 ## 部署到 GitHub Pages
 
+已部署於 <https://sora0811.github.io/LastBastion/>：repository `Sora0811/LastBastion`，Pages 來源為 `main` 分支根目錄。
+
+日常更新只要提交並推上 `main`，約一分鐘後自動重建：
+
 ```powershell
 cd D:\LastBastion
-git init
 git add .
-git commit -m "Last Bastion v0.3"
-git branch -M main
-git remote add origin https://github.com/sora0811/LastBastion.git
-git push -u origin main
+git commit -m "說明這次的改動"
+git push
 ```
 
-到 repository 的 **Settings → Pages**，Source 選 **Deploy from a branch**，Branch 選 `main`、資料夾 `/ (root)`，存檔後約一分鐘可於
-`https://sora0811.github.io/LastBastion/` 看到。
+若要在別的帳號或 repository 重建，再照下列步驟：建立空 repository → `git remote add origin <網址>` → `git push -u origin main` → **Settings → Pages** 選 **Deploy from a branch**、`main`、`/ (root)`。
 
 - 網站是純靜態檔案，不需要 Actions。
 - 已附 `.nojekyll`，避免 Jekyll 處理 `assets/` 內的特殊檔名。
