@@ -800,6 +800,7 @@ a.contact:focus-visible {
 .support {
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 6px;
   padding: 15px 17px;
   border: 1px solid var(--line-wood);

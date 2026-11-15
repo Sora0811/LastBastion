@@ -3,15 +3,59 @@
   "updated": "2026-11-15",
   "projects": [
     {
-      "id": "slot-1",
-      "name": "專案名稱",
-      "summary": "一句話說明這個專案，例如作品類型或它解決的問題。",
-      "url": "",
+      "id": "lbb-studio",
+      "name": "小黑盒 Discord 角色工作室",
+      "summary": "本機角色工作室：建立或匯入角色卡、選擇模型，在網頁試聊；Discord 為選配。",
+      "url": "https://github.com/Sora0811/little-black-box-studio",
       "year": "2026",
-      "tags": ["WEB"],
-      "status": "draft",
+      "tags": ["BOT", "LOCAL"],
+      "status": "wip",
       "rooms": ["armory"],
-      "issuesUrl": ""
+      "issuesUrl": "https://github.com/Sora0811/little-black-box-studio/issues"
+    },
+    {
+      "id": "grey-index",
+      "name": "灰岩的案件手帳",
+      "summary": "商店街的生意經公開試玩：調查三間店與五名人物，用關鍵字交叉詢問，在手帳整理線索。",
+      "url": "https://sora0811.github.io/Grey_index_test/",
+      "year": "2026",
+      "tags": ["WEB", "GAME"],
+      "status": "wip",
+      "rooms": ["armory"],
+      "issuesUrl": "https://github.com/Sora0811/Grey_index_test/issues"
+    },
+    {
+      "id": "uh-toolkit",
+      "name": "UH TRPG 工具庫",
+      "summary": "UH TRPG 的網頁小工具集合：購買計算器與購買清單，每個工具可單獨開啟。",
+      "url": "https://sora0811.github.io/UHtrpgToolKit/",
+      "year": "2026",
+      "tags": ["WEB", "TOOL"],
+      "status": "wip",
+      "rooms": ["armory"],
+      "issuesUrl": "https://github.com/Sora0811/UHtrpgToolKit/issues"
+    },
+    {
+      "id": "uh-trpg",
+      "name": "無限恐怖 TRPG 規則書",
+      "summary": "2.34 版規則書的 Web 版：CHM 解包、簡繁轉換、規則與資源拆分、條目重整後上線。",
+      "url": "https://sora0811.github.io/UnlimitedHorrorTrpg/",
+      "year": "2026",
+      "tags": ["DOCS", "WEB"],
+      "status": "wip",
+      "rooms": ["armory"],
+      "issuesUrl": "https://github.com/Sora0811/UnlimitedHorrorTrpg/issues"
+    },
+    {
+      "id": "idea-archive",
+      "name": "想法與概念堆積區",
+      "summary": "以 Markdown 保存構想、決策與歷史索引，依遊戲、世界觀、工具與研究分類。",
+      "url": "https://github.com/Sora0811/idea-archive",
+      "year": "2026",
+      "tags": ["DOCS"],
+      "status": "wip",
+      "rooms": ["armory"],
+      "issuesUrl": "https://github.com/Sora0811/idea-archive/issues"
     }
   ]
 }

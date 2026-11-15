@@ -117,7 +117,7 @@ function buildItem(project) {
   name.className = 'project__name';
   name.textContent = project.name;
   head.append(name);
-  head.append(badge(published ? status : '連結待補', published ? status.tone : 'hold'));
+  head.append(badge(published ? status.label : '連結待補', published ? status.tone : 'hold'));
 
   const text = document.createElement('span');
   text.className = 'project__text';
