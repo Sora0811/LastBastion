@@ -3,7 +3,7 @@
 以地下堡壘的空間結構作為導覽的個人創作展示網站。
 每一道**樓梯**代表一層，每一條**走廊**代表同層的房間；左側通道圖的燈號標示目前所在位置。
 
-- 版本：v0.3
+- 版本：v0.4
 - 技術：純 HTML / CSS / SVG / 原生 JavaScript，無建置流程、無外部依賴
 - 網站網址：<https://sora0811.github.io/LastBastion/>
 - 部署：GitHub Pages（repository `Sora0811/LastBastion`，main 分支根目錄）
@@ -36,7 +36,7 @@ LastBastion/
 │   ├── B1-lounge/index.html            交誼廳（首頁）
 │   ├── B1-lounge/annex/index.html      副廳
 │   ├── B2-dormitory/index.html         宿舍
-│   ├── B2-dormitory/room-1|2|3/        房間 1～3
+│   ├── B2-dormitory/room-1|2|3|13/     房間 1～3、13
 │   ├── B3-workshop/index.html          工務區（樓層門廳）
 │   ├── B3-armory/index.html            裝備間
 │   ├── B3-training/index.html          訓練室
