@@ -27,7 +27,8 @@ LastBastion/
 │   └── images/
 │       ├── emblem.svg         網站標誌（favicon）
 │       ├── vines-left.svg     橫幅左側藤蔓（可獨立替換）
-│       └── vines-right.svg    橫幅右側藤蔓
+│       ├── vines-right.svg    橫幅右側藤蔓
+│       └── rooms/room-13/     房間插圖（fish-room.jpg）
 ├── data/
 │   ├── navigation.json        樓層與房間結構（唯一導覽來源）
 │   ├── projects.json          外部專案清單（各房間共用）

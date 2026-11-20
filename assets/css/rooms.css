@@ -1035,6 +1035,31 @@ a.contact:focus-visible {
   font-size: 13px;
 }
 
+/* ---------- 房間插圖（共用） ---------- */
+
+.room-figure {
+  margin: 0 0 20px;
+  border: 1px solid rgba(137, 102, 75, .18);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #F2EBDE;
+}
+
+.room-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.room-figure figcaption {
+  padding: 9px 12px;
+  font-size: 12.5px;
+  letter-spacing: .04em;
+  color: #7E786C;
+  border-top: 1px solid rgba(137, 102, 75, .14);
+  background: rgba(137, 102, 75, .05);
+}
+
 /* ---------- 各房間的個別調整 ---------- */
 
 /* 交誼廳：公告與指引之間留一點呼吸 */
