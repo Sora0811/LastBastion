@@ -1,5 +1,5 @@
 {
-  "version": "0.4",
+  "version": "0.5",
   "updated": "2026-11-20",
   "home": "lounge",
   "floors": [
@@ -58,6 +58,13 @@
               "code": "B2-04",
               "path": "content/B2-dormitory/room-3/index.html",
               "summary": "短篇、片段與世界觀筆記。"
+            },
+            {
+              "id": "room-11",
+              "label": "房間 11",
+              "code": "B2-11",
+              "path": "content/B2-dormitory/room-11/index.html",
+              "summary": "小璃的房間。書、畫稿與薰衣草紫的私人居室。"
             },
             {
               "id": "room-13",

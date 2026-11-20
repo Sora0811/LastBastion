@@ -28,7 +28,7 @@ LastBastion/
 │       ├── emblem.svg         網站標誌（favicon）
 │       ├── vines-left.svg     橫幅左側藤蔓（可獨立替換）
 │       ├── vines-right.svg    橫幅右側藤蔓
-│       └── rooms/room-13/     房間插圖（fish-room.jpg）
+│       └── rooms/             房間插圖（room-11、room-13）
 ├── data/
 │   ├── navigation.json        樓層與房間結構（唯一導覽來源）
 │   ├── projects.json          外部專案清單（各房間共用）
@@ -37,7 +37,7 @@ LastBastion/
 │   ├── B1-lounge/index.html            交誼廳（首頁）
 │   ├── B1-lounge/annex/index.html      副廳
 │   ├── B2-dormitory/index.html         宿舍
-│   ├── B2-dormitory/room-1|2|3|13/     房間 1～3、13
+│   ├── B2-dormitory/room-1|2|3|11|13/ 房間 1～3、11、13
 │   ├── B3-workshop/index.html          工務區（樓層門廳）
 │   ├── B3-armory/index.html            裝備間
 │   ├── B3-training/index.html          訓練室
